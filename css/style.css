@@ -1,0 +1,93 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    padding: 0px !important;
+}
+
+.navbar{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    height: 6vh;
+    background-color: #333;
+    align-items: center;
+/*    position: fixed;*/
+    justify-content: flex-start;
+    z-index: 1;
+    transform: translateZ(0);
+    flex-wrap: wrap;
+}
+
+.navbar input{
+    width: 200px;
+    height: 25px;
+    background-color: #3e4246;
+    color: white;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.navbar select{
+    min-width: 60px;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+}
+.navbar option{
+    background-color: #333;
+    outline: none;
+    border: 1px solid black;
+}
+#carousel{
+    width: 100%;
+    height: 70vh;
+}
+.middle{
+    height: 100px;
+    background-color: #f4f1f1;
+    position: relative;
+}
+.middle h2{
+    position: absolute;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    top: 15px;
+    left: 5%;
+}
+
+.middle h2:before{
+    content: "|";
+    margin-right: 1vw;
+    font-size: 30px;
+    color: red;
+}
+
+.middle input[type='button']{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    right:15%;
+    top: 30px;
+    background-color: red;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.checkbtn {
+    position: absolute;
+    top: 40px;
+    right: 30%;
+}
