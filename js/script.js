@@ -1,17 +1,15 @@
 $(function(){
     $.getJSON("https://us-central1-bookaholic-786.cloudfunctions.net/home",function(data){
-        var images=[];
         $.each(data.combos,function(i,item){
-            console.log(item.imageURL);
-            $("#carousel").find("img").attr("src",item.imageURL);
+          if(i===0)
+          var div = $("<div>").attr("class","item active").appendTo($('.carousel-inner'));
+          else {
+          var div = $("<div>").attr("class","item").appendTo($('.carousel-inner'));
+          }
+          var img = $('<img>').attr('src',item.imageURL).css({
+            width: "70%",
+            height: "70vh"
+          }).appendTo(div);
         });
-    });
-    
-    $('#carousel').slick({
-        accessibility: true,
-        adaptiveHeight: true,
-        arrows: true,
-        mobileFirst: true,
-        pauseOnFocus: true,
     });
 });
